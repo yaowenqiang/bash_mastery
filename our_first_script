@@ -1,4 +1,15 @@
 #!/bin/bash
 
+# Author: jacky.yao
+# Date Created: 10/04/2026
+# Last Modified: 10/04/2026
+ 
+# Description:
+# Prints "This is my first script" to the terminal
+
+# Usage
+# our_first_script
+
+
 echo "This is my first script"
 exit 0
