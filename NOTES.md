@@ -239,6 +239,67 @@ if [[ 2 -gt 1 ]]; then
 fi
 ```
 
+4 Stages of Expansions
+
++ Stage 1: Brace Expansion
++ Stage 2
+  + Parameter expansiion
+  + Arithmetic expansiion
+  + Command substitution
+  + Tilde expansiion
++ Stege 3: Word Splitting
++ Stege 4: globbing
+
+
+The first thing you need to know is that expansion in earlier stages are performed first.
+
+The second thing you need to know is that expansions that re in the same stage are all given the same priority, and are simply performed in the order they are found on the command line when it is read from left to right.
+
+> echo $name has $(( 1 + 2 )) apples
+
+> echo $name has {1..3} apples and $(( 5 + 2 )) oranges
+
+## step 3 : Word splitting
+
+
+word splitting is a process the shell performs to split the result of some unqouted expansions into separate words
+
+Word splitting can have some very significant effects on how your command lines are interpreted 
+
+word splitting is only perfomed on the results of unqouted
+
++ Parameter expansion
++ Command substitution
++ Arithmetic expansions
+
+The characters used to split words are governed by ths IFS(Internal Field Separater) variable
+
++ Space
++ tab
++ new line
+
+> echo  "${IFS@Q}" # can print out the IFS
+
+> numbers="1 2 3 4 5"
+> touch $numbers
+
+> touch "$numbers"
+
+> IFS=","
+
+
+
+to be considered as a single word:
+
+wrap that expansion in double qoute!
+
+command substitution to be considered as a single word on the command line, maybe you want the output to be considered as just one argument to a command
+
+
+
+
+
+
 
 
 
