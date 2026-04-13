@@ -315,8 +315,21 @@ Globbing Introduction
 > ls file[0-9].txt
 > rm ~/download/*.jpg
 
+## Step 4: Qoute Removal
+
+3 Types of qoutes
+
++ Backslashes: \
++ single qoutes: ''
++ Double qoutes: ""
 
 
+During qoute removal, the shell removes sll unqouted backslashes,single qoute characters, and double qoute characters that dit NOT result from a shell expansion.
+
+> echo \$HOME
+> echo '\$HOME'
+> path="c:\Users\Karen\Documents"
+echo $PATH
 
 
 
