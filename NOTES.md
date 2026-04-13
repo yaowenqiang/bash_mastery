@@ -295,8 +295,25 @@ wrap that expansion in double qoute!
 
 command substitution to be considered as a single word on the command line, maybe you want the output to be considered as just one argument to a command
 
+## Globbing
+
+Globbing Introduction
+
++ Originates from the 'glob' program present in early versions of Bell Lab's unix operation system from 1969 - 1975
++ Globbing is used as a shortcut fro listing the files that a command should operate one
++ Globbing is only perfomed on words(not operators)
++ Globbing Patterns are words that contain unqouted Special Pattern Characters:
+  + *
+  + ？
+  + 【
 
 
+
+> ls [ab].txt
+> ls file[abc][abc][abc].txt
+> ls file[a-g].txt
+> ls file[0-9].txt
+> rm ~/download/*.jpg
 
 
 
