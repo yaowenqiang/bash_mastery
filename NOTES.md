@@ -329,7 +329,38 @@ During qoute removal, the shell removes sll unqouted backslashes,single qoute ch
 > echo \$HOME
 > echo '\$HOME'
 > path="c:\Users\Karen\Documents"
-echo $PATH
+> echo $PATH
+
+## Step 5: Redirection
+
+### Data Streams:
+
++ Stream 0 = Standard input(stdin)
++ Stream 1 = Standard output(stdout)
++ Stream 2 = Standard error(stderr)
+
+#### Standard Input 
+
+Standard input provides us with a alternative way of providing input to a command, aside from using command line arguments
+
+#### Standard Output 
+
+Stdandard output contains the data that is produces after a sussessful command execution
+
+#### Standard Error
+
+Standard error contains all error messages and status messages that a command produces
+
+
+> cat
+> echo "This is some output" > hello.txt
+> cd /root 2> error.txt
+> cd /root 2>> error.txt
+> cd /root &> /dev/null # redirect error and stdout to /dev/null
+
+> cd /root &>> error.txt
+
+
 
 
 
