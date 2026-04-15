@@ -363,4 +363,27 @@ Standard error contains all error messages and status messages that a command pr
 
 
 
+echo $name > $out
+
+Step 1: Tokenisation-
+
+identify Unqouted Metacharacters
+
+Step 2: Command Identification-
+Step 3: expansions
+Stage 1: Brace expansion
+Stege 2:
+
++ Parameter expansions
++ Arithmetic expansions
++ Command Substitution
++ tilde expansions
+
+Stage 3: Word splitting
+Stage 4: globbing(aka Filename expansion)
+Step 4: qoute removal
+Step 5: Redirections
+
+
+
 
