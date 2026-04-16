@@ -386,4 +386,5 @@ Step 5: Redirections
 
 
 
+> echo "$(ls *.txt)"
 
