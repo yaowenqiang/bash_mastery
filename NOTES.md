@@ -388,3 +388,10 @@ Step 5: Redirections
 
 > echo "$(ls *.txt)"
 
+## Special parameters
+
+
++ Parameter that bash gives special menaing
++ value of a special parameters is calculated for us based on our current script
+
+

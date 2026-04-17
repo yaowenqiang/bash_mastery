@@ -14,3 +14,6 @@ echo "the 11th argument is $11"
 
 echo "the 10th argument is {$10}"
 echo "the 11th argument is {$11}"
+
+echo $#
+echo $0
