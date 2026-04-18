@@ -395,3 +395,9 @@ Step 5: Redirections
 + value of a special parameters is calculated for us based on our current script
 
 
+> $@
+> "$@" prevent word-splitting 
+> $* = $@
+> "$*"
+
+
