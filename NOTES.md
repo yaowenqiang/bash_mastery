@@ -412,3 +412,67 @@ Step 5: Redirections
 > read -t 5 # set read time
 > read -s # read secrectly,dont show user input in the terminal
 
+## List
+
+when you input one or more commands on a given line
+
+### list Operators
+
+types of control operators that enable us to create lists of commands that operate in different ways
+
+
+list Operators
+
++ &
++ ;
++ &&
++ ||
+
+The && operator makes it so that the second command only runs if the first one was successful
+
+
+## The test commands
+
+
+if a test is evaluated to be true, the test will return an exit status of 0
+
+### Test commands
+
+a command that can be used in bash to compare different pieces of information
+
+
+#### Integer test operators
+
+> [ 2 -eq 2 ] ; echo $?
+> [ 2 -ne 2 ] ; echo $?
+> [ 2 -gt 2 ] ; echo $?
+> [ 2 -lt 2 ] ; echo $?
+> [ 2 -geq 2 ] ; echo $?
+> [ 2 -leq 2 ] ; echo $?
+
+#### String test operators
+
+> [[ $a = $b ]]; echo $?
+> [[ -z $c ]]; echo $? # match empty string
+> [[ -n $c ]]; echo $? # match non-empty string
+
+#### File test operators compare files
+
+> [[ -e filename ]]; print $?  # test file exists
+> [[ -f filename ]]; print $?  # test is a file
+> [[ -d filename ]]; print $?  # test is a directory
+> [[ -x filename ]]; print $?  # test is execution
+
+> -r -w -nt
+> [[ -r filename ]]; print $?  # test is reable
+> [[ -w filename ]]; print $?  # test is writable
+> [[ file1 -nt file2 ]]; print $?  # test file1 is newer then file2
+
+
+## If statements
+
+## Case statements
+
+
+case statements start and end using the reserved words 'case' and 'esca'
+
