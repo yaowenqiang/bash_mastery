@@ -472,3 +472,12 @@ a command that can be used in bash to compare different pieces of information
 
 case statements start and end using the reserved words 'case' and 'esac'
 
+## While loop
+
+While loops run a set of commands while a certain condition is true
+
+
+## Getopts command
+
+## Read-while loop
+
