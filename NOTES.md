@@ -481,3 +481,34 @@ While loops run a set of commands while a certain condition is true
 
 ## Read-while loop
 
+## Arrays
+
+### Indexed arrays
+
+
+```bash
+numbers = (1 2 3 4)
+echo ${numbers[0]}
+echo ${numbers[2]} # 3
+echo ${numbers[@]} # print all elements
+
+echo ${numbers[@]} # print all elements
+echo ${numbers[@]:1} # array slice start from 1
+echo ${numbers[@]:1:2} # array slice start from 1
+numbers+=(5)
+unset numbers[index]
+echo ${!numbers[@]}
+numbers[0]=a
+
+```
+### readarray command
+
+```bash
+readarray -t days < days.txt
+
+echo ${days[@]@Q}
+
+touch file{001..100}.txt
+
+readarray files <(ls)
+```
