@@ -14,5 +14,3 @@ echo "I am $age"
 
 read -t 5 -s -p "Input your town: " town
 echo "I am from $town"
-
-

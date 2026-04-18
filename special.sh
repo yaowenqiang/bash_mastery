@@ -6,4 +6,3 @@
 #touch "$@"
 IFS=,
 echo "$*"
-

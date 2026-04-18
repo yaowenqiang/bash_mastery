@@ -6,4 +6,4 @@ else
   mkdir $HOME/performance
   echo "$HOME/performance folder has been created"
 fi
-free >> $HOME/performance/memory.log
+free >>$HOME/performance/memory.log

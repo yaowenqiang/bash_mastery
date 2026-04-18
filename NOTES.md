@@ -6,7 +6,7 @@
 Three types of shell parameters
 
 + Variables
-+ Positonal parameters
++ Positional parameters
 + Special parameters
 
 
@@ -37,14 +37,13 @@ the PS1 variable contains the prompt string shown in the terminal before each co
 
 > ${name,}
 
-### change all leter letters
+### change all letters
 
 > ${name,,}
 
-## change variable to uppername
+## change variable to uppercase
 
-
-### change first letter(caret letter)
+### change first letter (capital letter)
 > ${name^}
 
 ### change all letters
@@ -73,9 +72,9 @@ the PS1 variable contains the prompt string shown in the terminal before each co
 
 > $(command)
 
-## Arithemetic expansiion(算术扩展)
+## Arithmetic expansion (算术扩展)
 
-> $((expresion))
+> $((expression))
 
 
 
@@ -122,12 +121,12 @@ the PS1 variable contains the prompt string shown in the terminal before each co
 
 
 
-> Token: a squence of characters that is considered as a single unit by the shell 
+> Token: a sequence of characters that is considered as a single unit by the shell
 
 > Word: a token that does not contain an unquoted Metacharacter
 > Operator: a token that contains at least one unquoted metacharacter
 
-The difference between words and operators: words never contain unqouted metacharacters, operators always contain unquoted metacharacters
+The difference between words and operators: words never contain unquoted metacharacters, operators always contain unquoted metacharacters
 
 
 
@@ -147,34 +146,33 @@ Compound commands: on the other hand, provide bash with its programming construc
 
 
 
-## Qouting
+## Quoting
 
-Qouting is about Removing Special Meanings
+Quoting is about Removing Special Meanings
 
+Three Types of Quoting
 
-Three Types of Qouting
-
-+ Backslash(\):
++ Backslash (\):
   + Removes special meaning from next character
-+ Single Qoutes(')
++ Single Quotes (')
   + Removes special meaning from all characters inside
-+ Double Qoutes(")
-  + Removes special meaning from all except dollar signs($) and backticks(`)
++ Double Quotes (")
+  + Removes special meaning from all except dollar signs ($) and backticks (`)
 
 > echo jon & jane # error
 > echo jon \& jane
 
 filepath=c:\Users\ziyad\Documents
-echo filepath
+echo $filepath
 
 
 filepath=c:\\Users\\ziyad\\Documents
-echo filepath
+echo $filepath
 
-filepath=`c:\Users\ziyad\Documents'
-echo filepath
+filepath='c:\Users\ziyad\Documents'
+echo $filepath
 
-filepath=`c:\Users\$USER\Documents'
+filepath='c:\Users\$USER\Documents'
 
 filepath="c:\Users\$USER\Documents"
 
@@ -204,7 +202,7 @@ Control operators
 + )
 
 
-Redirextion operators
+Redirection operators
 
 + <
 + >
@@ -218,7 +216,7 @@ Redirextion operators
 
 
 
-Control operators + Redirection operators only matter if they are unqouted
+Control operators + Redirection operators only matter if they are unquoted
 
 > echo $name > out.txt
 
@@ -243,17 +241,17 @@ fi
 
 + Stage 1: Brace Expansion
 + Stage 2
-  + Parameter expansiion
-  + Arithmetic expansiion
+  + Parameter expansion
+  + Arithmetic expansion
   + Command substitution
-  + Tilde expansiion
-+ Stege 3: Word Splitting
-+ Stege 4: globbing
+  + Tilde expansion
++ Stage 3: Word Splitting
++ Stage 4: globbing
 
 
 The first thing you need to know is that expansion in earlier stages are performed first.
 
-The second thing you need to know is that expansions that re in the same stage are all given the same priority, and are simply performed in the order they are found on the command line when it is read from left to right.
+The second thing you need to know is that expansions that are in the same stage are all given the same priority, and are simply performed in the order they are found on the command line when it is read from left to right.
 
 > echo $name has $(( 1 + 2 )) apples
 
@@ -262,17 +260,17 @@ The second thing you need to know is that expansions that re in the same stage a
 ## step 3 : Word splitting
 
 
-word splitting is a process the shell performs to split the result of some unqouted expansions into separate words
+word splitting is a process the shell performs to split the result of some unquoted expansions into separate words
 
-Word splitting can have some very significant effects on how your command lines are interpreted 
+Word splitting can have some very significant effects on how your command lines are interpreted
 
-word splitting is only perfomed on the results of unqouted
+word splitting is only performed on the results of unquoted
 
 + Parameter expansion
 + Command substitution
 + Arithmetic expansions
 
-The characters used to split words are governed by ths IFS(Internal Field Separater) variable
+The characters used to split words are governed by the IFS (Internal Field Separator) variable
 
 + Space
 + tab
@@ -291,7 +289,7 @@ The characters used to split words are governed by ths IFS(Internal Field Separa
 
 to be considered as a single word:
 
-wrap that expansion in double qoute!
+wrap that expansion in double quote!
 
 command substitution to be considered as a single word on the command line, maybe you want the output to be considered as just one argument to a command
 
@@ -300,12 +298,12 @@ command substitution to be considered as a single word on the command line, mayb
 Globbing Introduction
 
 + Originates from the 'glob' program present in early versions of Bell Lab's unix operation system from 1969 - 1975
-+ Globbing is used as a shortcut fro listing the files that a command should operate one
-+ Globbing is only perfomed on words(not operators)
-+ Globbing Patterns are words that contain unqouted Special Pattern Characters:
++ Globbing is used as a shortcut for listing the files that a command should operate on
++ Globbing is only performed on words (not operators)
++ Globbing Patterns are words that contain unquoted Special Pattern Characters:
   + *
-  + ？
-  + 【
+  + ?
+  + [
 
 
 
@@ -315,16 +313,16 @@ Globbing Introduction
 > ls file[0-9].txt
 > rm ~/download/*.jpg
 
-## Step 4: Qoute Removal
+## Step 4: Quote Removal
 
-3 Types of qoutes
+3 Types of quotes
 
 + Backslashes: \
-+ single qoutes: ''
-+ Double qoutes: ""
++ single quotes: ''
++ Double quotes: ""
 
 
-During qoute removal, the shell removes sll unqouted backslashes,single qoute characters, and double qoute characters that dit NOT result from a shell expansion.
+During quote removal, the shell removes all unquoted backslashes, single quote characters, and double quote characters that did NOT result from a shell expansion.
 
 > echo \$HOME
 > echo '\$HOME'
@@ -343,9 +341,9 @@ During qoute removal, the shell removes sll unqouted backslashes,single qoute ch
 
 Standard input provides us with a alternative way of providing input to a command, aside from using command line arguments
 
-#### Standard Output 
+#### Standard Output
 
-Stdandard output contains the data that is produces after a sussessful command execution
+Standard output contains the data that is produced after a successful command execution
 
 #### Standard Error
 
@@ -367,12 +365,12 @@ echo $name > $out
 
 Step 1: Tokenisation-
 
-identify Unqouted Metacharacters
+identify Unquoted Metacharacters
 
 Step 2: Command Identification-
 Step 3: expansions
 Stage 1: Brace expansion
-Stege 2:
+Stage 2:
 
 + Parameter expansions
 + Arithmetic expansions
@@ -380,8 +378,8 @@ Stege 2:
 + tilde expansions
 
 Stage 3: Word splitting
-Stage 4: globbing(aka Filename expansion)
-Step 4: qoute removal
+Stage 4: globbing (aka Filename expansion)
+Step 4: quote removal
 Step 5: Redirections
 
 
@@ -390,13 +388,11 @@ Step 5: Redirections
 
 ## Special parameters
 
-
-+ Parameter that bash gives special menaing
++ Parameter that bash gives special meaning
 + value of a special parameters is calculated for us based on our current script
 
-
 > $@
-> "$@" prevent word-splitting 
+> "$@" prevent word-splitting
 > $* = $@
 > "$*"
 
@@ -410,7 +406,7 @@ Step 5: Redirections
 
 > read -p # set prompt
 > read -t 5 # set read time
-> read -s # read secrectly,dont show user input in the terminal
+> read -s # read secretly, dont show user input in the terminal
 
 ## List
 
@@ -447,8 +443,8 @@ a command that can be used in bash to compare different pieces of information
 > [ 2 -ne 2 ] ; echo $?
 > [ 2 -gt 2 ] ; echo $?
 > [ 2 -lt 2 ] ; echo $?
-> [ 2 -geq 2 ] ; echo $?
-> [ 2 -leq 2 ] ; echo $?
+> [ 2 -ge 2 ] ; echo $?
+> [ 2 -le 2 ] ; echo $?
 
 #### String test operators
 
@@ -464,9 +460,9 @@ a command that can be used in bash to compare different pieces of information
 > [[ -x filename ]]; print $?  # test is execution
 
 > -r -w -nt
-> [[ -r filename ]]; print $?  # test is reable
-> [[ -w filename ]]; print $?  # test is writable
-> [[ file1 -nt file2 ]]; print $?  # test file1 is newer then file2
+> [[ -r filename ]]; echo $?  # test is readable
+> [[ -w filename ]]; echo $?  # test is writable
+> [[ file1 -nt file2 ]]; echo $?  # test file1 is newer than file2
 
 
 ## If statements
@@ -474,5 +470,5 @@ a command that can be used in bash to compare different pieces of information
 ## Case statements
 
 
-case statements start and end using the reserved words 'case' and 'esca'
+case statements start and end using the reserved words 'case' and 'esac'
 

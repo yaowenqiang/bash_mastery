@@ -5,4 +5,4 @@ out="output.txt"
 #echo "$name" > ~/out txt
 #echo "$name" > "~/$out"
 #echo $name > ~/"$out"
-echo $name > "$HOME/$out"
+echo $name >"$HOME/$out"
