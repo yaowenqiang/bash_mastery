@@ -401,3 +401,14 @@ Step 5: Redirections
 > "$*"
 
 
+## read command
+
+> echo $REPLY
+> read
+
+> read input1 input2
+
+> read -p # set prompt
+> read -t 5 # set read time
+> read -s # read secrectly,dont show user input in the terminal
+
