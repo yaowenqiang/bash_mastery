@@ -16,5 +16,16 @@ else
     read -n 4 -s -p "What access code would you like to use?(must be 4 digits): " access
     echo
 fi
-echo "$firstname,$lastname,$ext,$access" >> extensions.csv
 
+PS3="What type of phone do you have?"
+select phone in headset handheld;do
+  echo "You chose $phone"
+break
+done
+
+PS3="Which department do you work in ?:"
+select department in finace sales engineering "customer server";do
+  echo "you choose $department"
+  break
+done
+echo "$firstname,$lastname,$ext,$access,$phone,$department" >> extensions.csv
