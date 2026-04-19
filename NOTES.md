@@ -510,5 +510,11 @@ echo ${days[@]@Q}
 
 touch file{001..100}.txt
 
-readarray files <(ls)
+readarray files < <(ls)
 ```
+
+## For loop
+
+A for loop iterators over a list of words or elements and performs a set of commands 'for' each element
+
+
