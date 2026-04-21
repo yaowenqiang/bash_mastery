@@ -518,3 +518,57 @@ readarray files < <(ls)
 A for loop iterators over a list of words or elements and performs a set of commands 'for' each element
 
 
+## Debugging
+
+### shellcheck
+
+> www.shellcheck.net
+> sudo apt install shellcheck
+> shellcheck yourscript
+
+
+
+### how to find help
+
++ man
++ help
++ info
++ type
+
+> type -a cd
+
+
+> help cd
+
+> help -s cd
+> help -d cd
+
+> help
+
+> help help
+
+> man ls
+
+> man cd
+
+> man -k compress
+> man -k "list directory contents"
+> man -K "list directory contents"
+
+> man man
+
+> info ls
+
+
+> info
+
+
+
+
+
+
+Internal commands are commands that are built into the bash shell
+External commands are commands that are external to bash
+
+
+
