@@ -572,3 +572,25 @@ External commands are commands that are external to bash
 
 
 
+## scheduling and automation
+
+
+> apt install at
+> service atd status
+> sudo service atd stop/start/restart
+> at 9:30am <Enter>
+
+> at> echo "hello world"
+> ctrl + D to exit
+> at -l # list jobs
+> at -r jobid
+> at 9:00am -f script_path
+> at 9am monday -f script_path
+> at 9am 12/23/2026 -f script_path
+> at 9am 23.12.2026 -f script_path
+> at 9am tomorrow -f script_path
+> at 9am next week -f script_path
+> at now + 5 minutes -f script_path
+> at now + 2 days -f script_path
+
+
