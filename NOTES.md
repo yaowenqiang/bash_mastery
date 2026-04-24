@@ -593,4 +593,32 @@ External commands are commands that are external to bash
 > at now + 5 minutes -f script_path
 > at now + 2 days -f script_path
 
+### cron
+
+> service cron status
+> service cron start
+
+> crontab -e
+
+> * * * * *
+> minute hour day month week command
+> 分钟 小时 日期 月份 星期 要执行的命令
+
+🔣 特殊字符说明
+* (星号): 代表该字段的所有可能值，即“每”。
+例如，在“小时”字段使用 *，表示“每小时”。
+, (逗号): 用于分隔多个不连续的值。
+例如，1,3,5 在“分钟”字段表示第 1、3、5 分钟。
+- (连字符): 用于定义一个连续的取值范围。
+例如，1-5 在“星期”字段表示从周一到周五。
+/ (斜杠): 用于指定步长，即“每...一次”。
+例如，*/15 在“分钟”字段表示“每 15 分钟”。
+
+> * * * JAN
+
+> man 4 crontabs
+
+> crontab.guru
+
+
 
