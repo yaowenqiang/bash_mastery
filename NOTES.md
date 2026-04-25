@@ -619,6 +619,25 @@ External commands are commands that are external to bash
 > man 4 crontabs
 
 > crontab.guru
+> mcron
 
+## cron directories
+
+
+Cron directories are folders on your system where you can place scripts to run at a particular frequency
+
+> ls /etc/ | grep cron
+
+
+cron.d/
+cron.daily/
+cron.hourly/
+cron.monthly/
+cron.weekly/
+
+> run-parts
+
+> mkdir cron.daily.2am 
+> 00 02 * * * run-parts ~/cron.daily.2am/ --report # will run all executable scripts in the directory
 
 
