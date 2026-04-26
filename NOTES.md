@@ -640,4 +640,10 @@ cron.weekly/
 > mkdir cron.daily.2am 
 > 00 02 * * * run-parts ~/cron.daily.2am/ --report # will run all executable scripts in the directory
 
+### Anacron
+
+> /etc/anacrontab
+
+> 周期  延迟  任务标识符  命令 
+
 
